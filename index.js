@@ -1,3 +1,10 @@
+/*
+    BRIEF:      Agenda of students made with Node.js
+    AUTHOR:     Félix Armenta Aguiñaga
+    DATE:       2022-12-12
+    VERSION:    0.0.1
+*/
+
 const express = require("express");
 const mongoose = require("mongoose");
 
