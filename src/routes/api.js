@@ -23,7 +23,7 @@ router.post("/contactos", express.json(), contactosController.crear); // Middlew
 router.get("/contactos/borrar/:id", contactosController.borrar);
 
 // UPDATE
-router.get("/contactos/edit/:id", contactosController.editar);
+router.get("/contactos/editar/:id", contactosController.editar);
 
 
 

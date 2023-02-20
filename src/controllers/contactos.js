@@ -88,13 +88,29 @@ module.exports = {
     },
     editar: (req, res) => {
         const id = req.params.id;
+        const name = req.query.name;
+        const tel = req.query.tel;
+        const mail = req.query.mail;
         contacto.findOne({status: 1, _id: id})
-            .then(data => {
-                res.send("Se actualizo el contacto");
-            })
-            .catch(err => {
-                res.status(400).send("No se encontro el id");
-            });
+        .then(data => {
+            if (name != undefined)
+            {
+                data.nombre = name;
+            }
+            if (tel != undefined)
+            {
+                data.telefono = tel;
+            }    
+            if (mail != undefined)
+            {
+                data.correo = mail;
+            }
+            data.save();
+            res.send("Se actualizó correctamente a " + data.nombre + "\n" + data);
+        })
+        .catch(err => {
+            res.status(400).send("No se encontro el id");
+        });
     }
 } 
 
