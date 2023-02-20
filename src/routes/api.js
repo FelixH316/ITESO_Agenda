@@ -5,6 +5,7 @@ const contactosController = require("./../controllers/contactos");
 
 router.get("/contactos", contactosController.listar);
 router.get("/contactos/:id", contactosController.ver);
+
 //router.use("/contactos", express.json()); // para todos los endpoints dentro de contactos
 router.post("/contactos", express.json(), contactosController.crear);
 

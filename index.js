@@ -20,12 +20,10 @@ app.get("", (req, res) => {
     res.send("api works");
 });
 
-// const uri = "mongodb+srv://hope0:<password>@cluster0.bqmgv5l.mongodb.net/?retryWrites=true&w=majority";
-// const url = "mongodb+srv://hope0:EfgmEoZV0VWtnKUh@cluster0.bqmgv5l.mongodb.net/agenda_db?retryWrites=true&w=majority";
 // const urm = "mongodb+srv://<username>:<password>@cluster0.bqmgv5l.mongodb.net/?retryWrites=true&w=majority";
-const urn = 'mongodb+srv://usuario_prueba:hduFAMAeAunbWEX5@cluster0.bqmgv5l.mongodb.net/agenda_contactos?retryWrites=true&w=majority';
+const url = 'mongodb+srv://delaware_smash:hjcEEkYreSYffK7b@cluster0.bqmgv5l.mongodb.net/agenda_contactos?retryWrites=true&w=majority';
 
-mongoose.connect(urn, (err) => {    // Error-first callback
+mongoose.connect(url, (err) => {    // Error-first callback
     if(err) {
         console.log("No se pudo conectar a la base de datos");
     }
