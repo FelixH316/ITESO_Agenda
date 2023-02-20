@@ -1,3 +1,10 @@
+/*
+    BRIEF:      Agenda model
+    AUTHOR:     Félix Armenta Aguiñaga
+    DATE:       2022-12-12
+    VERSION:    0.0.1
+*/
+
 const { Schema, model } = require('mongoose');
 
 // status = 1. Activo
